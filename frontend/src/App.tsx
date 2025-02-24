@@ -1,33 +1,26 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
+import { Employee } from './types/employee'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const employee: Employee = {
+    id: 1,
+    name: 'João',
+    job: 'Back-end',
+    admission_date: '2019-12-02T00:00:00.000Z',
+    phone: '5551234567890',
+    image: 'https://img.favpng.com/25/7/23/computer-icons-user-profile-avatar-image-png-favpng-LFqDyLRhe3PBXM0sx2LufsGFU.jpg',
+  }
 
   return (
     <>
       <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+        <h2>Employee Details</h2>
+        <p>Name: {employee.name}</p>
+        <p>Job: {employee.job}</p>
+        <p>Admission Date: {new Date(employee.admission_date).toLocaleDateString()}</p>
+        <p>Phone: {employee.phone}</p>
+        <img src={employee.image} alt={`${employee.name}'s profile`} />
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
     </>
   )
 }
