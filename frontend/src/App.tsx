@@ -1,4 +1,5 @@
 import './App.css'
+import EmployeeTable from './components/Employee/Table'
 import { Employee } from './types/employee'
 
 function App() {
@@ -13,14 +14,9 @@ function App() {
 
   return (
     <>
-      <div>
-        <h2>Employee Details</h2>
-        <p>Name: {employee.name}</p>
-        <p>Job: {employee.job}</p>
-        <p>Admission Date: {new Date(employee.admission_date).toLocaleDateString()}</p>
-        <p>Phone: {employee.phone}</p>
-        <img src={employee.image} alt={`${employee.name}'s profile`} />
-      </div>
+      <EmployeeTable employees
+        ={[employee]}
+      />
     </>
   )
 }
