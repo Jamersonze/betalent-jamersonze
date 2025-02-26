@@ -1,4 +1,4 @@
-import './App.css'
+import './styles/App.css'
 import EmployeeTable from './components/Employee/Table'
 import { Employee } from './types/employee'
 
