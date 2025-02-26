@@ -1,6 +1,7 @@
 import './styles/App.css'
 import EmployeeTable from './components/Employee/Table'
 import { Employee } from './types/employee'
+import EmployeeSearch from './components/Employee/Search'
 
 function App() {
   const employee: Employee = {
@@ -14,6 +15,7 @@ function App() {
 
   return (
     <>
+      <EmployeeSearch />
       <EmployeeTable employees
         ={[employee]}
       />
