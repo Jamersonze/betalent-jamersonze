@@ -16,6 +16,11 @@ const EmployeeRow: React.FC<EmployeeRowProps> = ({ employee }) => {
         }
         return null;
     }
+
+    const formatAdmissionDate = (admissionDateString: string) => {
+        const date = new Date(admissionDateString);
+        return date.toLocaleDateString();
+    }
     
     return (
         <tr>
@@ -28,7 +33,7 @@ const EmployeeRow: React.FC<EmployeeRowProps> = ({ employee }) => {
             </td>
             <td>{employee.name}</td>
             <td>{employee.job}</td>
-            <td>{new Date(employee.admission_date).toLocaleDateString()}</td>
+            <td>{formatAdmissionDate(employee.admission_date)}</td>
             <td>{formatPhoneNumber(employee.phone)}</td>
         </tr>
     );
