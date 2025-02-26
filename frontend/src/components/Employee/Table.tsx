@@ -1,5 +1,6 @@
 import React from 'react';
 import { Employee } from '../../types/employee';
+import EmployeeRow from './Row';
 
 interface EmployeeTableProps {
     employees: Employee[];
@@ -19,19 +20,7 @@ const EmployeeTable: React.FC<EmployeeTableProps> = ({ employees }) => {
             </thead>
             <tbody>
                 {employees.map((employee) => (
-                    <tr key={employee.id}>
-                        <td>
-                            <picture>
-                                <source srcSet={employee.image} type="image/webp" />
-                                <source srcSet={employee.image} type="image/png" />
-                                <img src={employee.image} alt="Employee Image" />
-                            </picture>
-                        </td>
-                        <td>{employee.name}</td>
-                        <td>{employee.job}</td>
-                        <td>{employee.admission_date}</td>
-                        <td>{employee.phone}</td>
-                    </tr>
+                    <EmployeeRow key={employee.id} employee={employee} />
                 ))}
             </tbody>
         </table>
