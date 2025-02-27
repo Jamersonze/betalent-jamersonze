@@ -29,7 +29,6 @@ const EmployeeSearch: React.FC<EmployeeSearchProps> = ({data}) => {
     console.log(data);
     console.log(searchType);
     setFilteredEmployees(data.filter((employee) => employee[searchType].toLowerCase().includes(query.toLowerCase())));
-    // setFilteredEmployees();
     console.log(filteredEmployees);
   };
 
