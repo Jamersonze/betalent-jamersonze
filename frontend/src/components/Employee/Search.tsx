@@ -1,11 +1,5 @@
 import React, { useState } from 'react';
-
-enum SearchType {
-    Name = 'name',
-    Job = 'job',
-    Phone = 'phone',
-    clear = ''
-}
+import { SearchType } from '../../types/employee/search';
 
 const EmployeeSearch: React.FC = () => {
 

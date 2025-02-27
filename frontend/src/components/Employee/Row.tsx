@@ -1,5 +1,5 @@
 import React from 'react';
-import { Employee } from '../../types/employee';
+import { Employee } from '../../types/employee/main';
 
 interface EmployeeRowProps {
     employee: Employee;
