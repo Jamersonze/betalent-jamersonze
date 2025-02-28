@@ -25,15 +25,13 @@ const EmployeeSearch: React.FC<EmployeeSearchProps> = ({data}) => {
     setSearchType(event.target.value as SearchType);
   };
 
-  const handleSearch = () => {
-    console.log(data);
-    console.log(searchType);
+  const handleSearch = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
     setFilteredEmployees(data.filter((employee) => employee[searchType].toLowerCase().includes(query.toLowerCase())));
-    console.log(filteredEmployees);
   };
 
   return (
-    <form onSubmit={(e) => { e.preventDefault(); handleSearch(); }}>
+    <form onSubmit={handleSearch}>
       <select 
         name="SearchType" 
         value={searchType}
