@@ -18,6 +18,12 @@ const EmployeeTable: React.FC<EmployeeTableProps> = ({ employees }) => {
                     <th>Phone</th>
                 </tr>
             </thead>
+            {employees.length === 0 && 
+            <tbody>
+                <tr>
+                    <td colSpan={5}>No employees found</td>
+                </tr>
+            </tbody>}
             <tbody>
                 {employees.map((employee) => (
                     <EmployeeRow key={employee.id} employee={employee} />

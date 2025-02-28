@@ -1,5 +1,5 @@
-import { useContext, useState } from 'react';
-import { EmployeeFilteredListContext } from '../../contexts/EmployeeFilteredListContext';
+import { use, useContext, useEffect, useState } from 'react';
+import { EmployeeFilteredListContext, EmployeeSearchQueryContext } from '../../contexts/EmployeeFilteredListContext';
 import { Employee } from '../../types/employee/main';
 
 enum SearchType {
@@ -13,25 +13,26 @@ interface EmployeeSearchProps {
 }
 
 const EmployeeSearch: React.FC<EmployeeSearchProps> = ({data}) => {
+
   const [searchType, setSearchType] = useState(SearchType.Name);
-  const [query, setQuery] = useState('');
+  const [query, setQuery] = useContext(EmployeeSearchQueryContext);
+
   const [filteredEmployees, setFilteredEmployees] = useContext(EmployeeFilteredListContext);
 
   const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setQuery(event.target.value);
   };
 
+  useEffect(() => {
+    setFilteredEmployees(data.filter((employee) => employee[searchType].toLowerCase().includes(query.toLowerCase())));
+  }, [query, searchType]);
+
   const handleSearchTypeChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
     setSearchType(event.target.value as SearchType);
   };
 
-  const handleSearch = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    setFilteredEmployees(data.filter((employee) => employee[searchType].toLowerCase().includes(query.toLowerCase())));
-  };
-
   return (
-    <form onSubmit={handleSearch}>
+    <form>
       <select 
         name="SearchType" 
         value={searchType}
@@ -47,7 +48,6 @@ const EmployeeSearch: React.FC<EmployeeSearchProps> = ({data}) => {
         onChange={handleInputChange}
         placeholder="Search employees..."
       />
-      <button type="submit">Search</button>
     </form>
   );
 };
