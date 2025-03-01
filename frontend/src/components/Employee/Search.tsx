@@ -1,4 +1,4 @@
-import { use, useContext, useEffect, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import { EmployeeFilteredListContext, EmployeeSearchQueryContext } from '../../contexts/EmployeeFilteredListContext';
 import { Employee } from '../../types/employee/main';
 
@@ -17,7 +17,7 @@ const EmployeeSearch: React.FC<EmployeeSearchProps> = ({data}) => {
   const [searchType, setSearchType] = useState(SearchType.Name);
   const [query, setQuery] = useContext(EmployeeSearchQueryContext);
 
-  const [filteredEmployees, setFilteredEmployees] = useContext(EmployeeFilteredListContext);
+  const [, setFilteredEmployees] = useContext(EmployeeFilteredListContext);
 
   const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setQuery(event.target.value);
