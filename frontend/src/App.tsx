@@ -18,12 +18,22 @@ function App() {
   }, [])
 
   return (
-    <EmployeeFilteredListContext.Provider value={[filteredEmployees, setFilteredEmployees]}>
-      <EmployeeSearchQueryContext.Provider value={[searchQuery, setSearchQuery]}>
-        <EmployeeSearch data={employees} />
-      </EmployeeSearchQueryContext.Provider>
-      <EmployeeTable employees={searchQuery.length ? filteredEmployees : employees} />
-    </EmployeeFilteredListContext.Provider>
+    <>
+      <header>
+        <h1>BeTalent</h1>
+      </header>
+      <main>
+        <EmployeeFilteredListContext.Provider value={[filteredEmployees, setFilteredEmployees]}>
+          <section>
+            <h2>Funcionários</h2>
+            <EmployeeSearchQueryContext.Provider value={[searchQuery, setSearchQuery]}>
+              <EmployeeSearch data={employees} />
+            </EmployeeSearchQueryContext.Provider>
+          </section>
+          <EmployeeTable employees={searchQuery.length ? filteredEmployees : employees} />
+        </EmployeeFilteredListContext.Provider>
+      </main>
+    </>
   )
 }
 
