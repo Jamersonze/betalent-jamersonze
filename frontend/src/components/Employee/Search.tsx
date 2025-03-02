@@ -2,6 +2,8 @@ import { useContext, useEffect, useState } from 'react';
 import { EmployeeFilteredListContext, EmployeeSearchQueryContext } from '../../contexts/EmployeeFilteredListContext';
 import { Employee } from '../../types/employee/main';
 
+import "../../styles/Employee/Search.css";
+
 enum SearchType {
     Name = 'name',
     Job = 'job',
@@ -33,21 +35,27 @@ const EmployeeSearch: React.FC<EmployeeSearchProps> = ({data}) => {
 
   return (
     <form>
-      <select 
-        name="SearchType" 
-        value={searchType}
-        onChange={handleSearchTypeChange}
-      >
-        <option value={SearchType.Name}>Nome</option>
-        <option value={SearchType.Job}>Cargo</option>
-        <option value={SearchType.Phone}>Telefone</option>
-      </select>
-      <input
-        type="text"
-        value={query}
-        onChange={handleInputChange}
-        placeholder="Search employees..."
-      />
+      <section>
+        <label htmlFor="search">Funcionários</label>
+        <div className="search-container">
+          <select 
+            name="SearchType" 
+            value={searchType}
+            onChange={handleSearchTypeChange}
+          >
+            <option value={SearchType.Name}>Nome</option>
+            <option value={SearchType.Job}>Cargo</option>
+            <option value={SearchType.Phone}>Telefone</option>
+          </select>
+          <input
+            type="search"
+            name='search'
+            value={query}
+            onChange={handleInputChange}
+            placeholder="Pesquisar"
+          />
+        </div>        
+      </section>
     </form>
   );
 };
