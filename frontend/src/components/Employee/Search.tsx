@@ -36,7 +36,6 @@ const EmployeeSearch: React.FC<EmployeeSearchProps> = ({data}) => {
   return (
     <form>
       <section>
-        <label htmlFor="search">Funcionários</label>
         <div className="search-container">
           <select 
             name="SearchType" 
