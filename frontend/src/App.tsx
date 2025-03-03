@@ -5,6 +5,7 @@ import EmployeeSearch from './components/Employee/Search'
 import EmployeeTable from './components/Employee/Table'
 import { EmployeeFilteredListContext, EmployeeSearchQueryContext } from './contexts/EmployeeFilteredListContext'
 import { fetchData } from './api/api'
+import Header from './components/Header'
 
 function App() {
   
@@ -19,12 +20,10 @@ function App() {
 
   return (
     <>
-      <header>
-        <h1>BeTalent</h1>
-      </header>
+      <Header />
       <main>
         <EmployeeFilteredListContext.Provider value={[filteredEmployees, setFilteredEmployees]}>
-          <section>
+          <section className='search-section'>
             <h2>Funcionários</h2>
             <EmployeeSearchQueryContext.Provider value={[searchQuery, setSearchQuery]}>
               <EmployeeSearch data={employees} />

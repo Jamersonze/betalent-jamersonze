@@ -9,9 +9,9 @@ h1{
 /* Search */
 select {
     padding: 12px 16px;
-    border: 1px solid #DFDFDF;
+    border: 1px solid var(--gray-10);
     border-radius: 8px;
-    background-color: #FFF;
+    background-color: var(--white);
     color: black;
 }
 
@@ -19,16 +19,17 @@ select {
     position: relative;
     display: flex;
     align-items: center;
+    
 }
 
 input[type="search"] {
     flex: 1;
     padding: 12px 16px;
     padding-right: 40px; /* Add space for the icon */
-    border: 1px solid #DFDFDF;
+    border: 1px solid var(--gray-10);
     border-radius: 8px;
-    background-color: #FFF;
-    color: black;
+    background-color: var(--white);
+    color: var(--black-neutral);
 }
 
 input[type="search"]::placeholder {
@@ -41,4 +42,5 @@ input[type="search"]::placeholder {
     right: 16px;
     top: 10px;
     pointer-events: none;
+    color: var(--gray-10)
 }
