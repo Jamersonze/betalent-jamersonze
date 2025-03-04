@@ -15,9 +15,9 @@ const EmployeeTable: React.FC<EmployeeTableProps> = ({ employees }) => {
                 <tr>
                     <th>Image</th>
                     <th>Name</th>
-                    <th>Job</th>
-                    <th>Admission Date</th>
-                    <th>Phone</th>
+                    <th className='omit-on-mobile'>Job</th>
+                    <th className='omit-on-mobile'>Admission Date</th>
+                    <th className='omit-on-mobile'>Phone</th>
                 </tr>
             </thead>
             {employees.length === 0 && 
