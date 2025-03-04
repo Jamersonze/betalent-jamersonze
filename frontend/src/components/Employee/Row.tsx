@@ -28,13 +28,13 @@ const EmployeeRow: React.FC<EmployeeRowProps> = ({ employee }) => {
                 <picture>
                     <source srcSet={employee.image} type="image/webp" />
                     <source srcSet={employee.image} type="image/png" />
-                    <img width={100} src={employee.image} alt="Employee Image" />
+                    <img width={50} src={employee.image} alt="Employee Image" />
                 </picture>
             </td>
             <td>{employee.name}</td>
-            <td>{employee.job}</td>
-            <td>{formatAdmissionDate(employee.admission_date)}</td>
-            <td>{formatPhoneNumber(employee.phone)}</td>
+            <td className='omit-on-mobile'>{employee.job}</td>
+            <td className='omit-on-mobile'>{formatAdmissionDate(employee.admission_date)}</td>
+            <td className='omit-on-mobile'>{formatPhoneNumber(employee.phone)}</td>
         </tr>
     );
 };
