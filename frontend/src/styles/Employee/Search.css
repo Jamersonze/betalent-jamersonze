@@ -18,17 +18,15 @@ input[type="search"] {
     border-radius: 8px;
     background-color: var(--white);
     color: var(--black-neutral);
-}
 
-input[type="search"]::placeholder {
-    color: var(--gray-20);
-}
-
-.search-container{
     background-image: url(/Employee/Search/search.svg);
     background-repeat: no-repeat;
     background-attachment: scroll;
     background-position: 192px 7px;
+}
+
+input[type="search"]::placeholder {
+    color: var(--gray-20);
 }
 
 /* .search-container::after {
