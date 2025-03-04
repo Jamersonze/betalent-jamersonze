@@ -17,7 +17,7 @@ th, td {
     border: none;
 }
 
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 510px) {
     .omit-on-mobile {
         display: none;
     }
