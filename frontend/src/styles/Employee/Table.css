@@ -1,8 +1,8 @@
 table {
-    border-collapse: collapse; /* Remove white lines between columns */
+    border-collapse: collapse;
     border-radius: 8px;
     margin-top: 20px;
-    overflow: hidden; /* Ensure rounded corners are visible */
+    overflow: hidden;
 }
 
 thead {
@@ -14,5 +14,5 @@ thead {
 
 th, td {
     padding: 0;
-    border: none; /* Remove borders from table cells */
+    border: none;
 }
