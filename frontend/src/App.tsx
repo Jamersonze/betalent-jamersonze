@@ -24,7 +24,7 @@ function App() {
       <main>
         <EmployeeFilteredListContext.Provider value={[filteredEmployees, setFilteredEmployees]}>
           <section className='search-section'>
-            <h2>Funcionários</h2>
+            <h1>Funcionários</h1>
             <EmployeeSearchQueryContext.Provider value={[searchQuery, setSearchQuery]}>
               <EmployeeSearch data={employees} />
             </EmployeeSearchQueryContext.Provider>

@@ -35,9 +35,7 @@ const EmployeeSearch: React.FC<EmployeeSearchProps> = ({data}) => {
 
   return (
     <form>
-      <section>
-        <div className="search-container">
-          <select 
+      <select 
             name="SearchType" 
             value={searchType}
             onChange={handleSearchTypeChange}
@@ -53,8 +51,6 @@ const EmployeeSearch: React.FC<EmployeeSearchProps> = ({data}) => {
             onChange={handleInputChange}
             placeholder="Pesquisar"
           />
-        </div>        
-      </section>
     </form>
   );
 };

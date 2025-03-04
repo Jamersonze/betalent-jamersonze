@@ -4,6 +4,11 @@
   text-align: center;
 }
 
+main{
+  margin: 0 auto;
+  padding: 20px;
+}
+
 .search-section {
   display: flex;
   align-items: start;
