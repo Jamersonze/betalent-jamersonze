@@ -47,6 +47,7 @@ const EmployeeSearch: React.FC<EmployeeSearchProps> = ({data}) => {
           <input
             type="search"
             name='search'
+            className='search-container'
             value={query}
             onChange={handleInputChange}
             placeholder="Pesquisar"
