@@ -21,15 +21,3 @@ td {
     padding: 0;
     background-color: var(--white);
 }
-
-@media only screen and (max-width: 510px) {
-    .omit-on-mobile {
-        display: none;
-    }
-}
-
-@media only screen and (min-width: 511px) {
-    .omit-on-desktop {
-        display: none;
-    }
-}
