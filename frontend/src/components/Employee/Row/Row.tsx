@@ -1,5 +1,8 @@
 import React from 'react';
-import { Employee } from '../../types/employee/main';
+import { Employee } from '../../../types/employee/main';
+
+import formatAdmissionDate from '../../../utils/format/admission-date';
+import formatPhoneNumber from '../../../utils/format/phone-number';
 
 interface EmployeeRowProps {
     employee: Employee;
@@ -7,20 +10,7 @@ interface EmployeeRowProps {
 
 const EmployeeRow: React.FC<EmployeeRowProps> = ({ employee }) => {
 
-    const formatPhoneNumber = (phoneNumberString: string) => {
-        const cleaned = ('' + phoneNumberString).replace(/\D/g, '');
-        const phoneRegExp = /^(\d{2})(\d{2})(\d{5})(\d{4})$/;
-        const match = cleaned.match(phoneRegExp);
-        if (match) {
-            return `+${match[1]} (${match[2]}) ${match[3]}-${match[4]}`;
-        }
-        return null;
-    }
-
-    const formatAdmissionDate = (admissionDateString: string) => {
-        const date = new Date(admissionDateString);
-        return date.toLocaleDateString();
-    }
+    
     
     return (
         <tr>
