@@ -1,14 +1,30 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Employee } from '../../types/employee/main';
 import EmployeeRow from './Row/Row';
 
 import '../../styles/Employee/Table.css';
+import EmployeeRowMobile from './Row/Mobile';
 
 interface EmployeeTableProps {
     employees: Employee[];
 }
 
 const EmployeeTable: React.FC<EmployeeTableProps> = ({ employees }) => {
+
+    const [isMobile, setIsMobile] = React.useState(window.innerWidth < 510);
+
+    useEffect(() => {
+        const handleResize = () => {
+            setIsMobile(window.innerWidth < 510);
+        };
+
+        window.addEventListener('resize', handleResize);
+
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
+    }, []);
+
     return (
         <table>
             <thead>
@@ -28,7 +44,12 @@ const EmployeeTable: React.FC<EmployeeTableProps> = ({ employees }) => {
             </tbody>}
             <tbody>
                 {employees.map((employee) => (
-                    <EmployeeRow key={employee.id} employee={employee} />
+                    isMobile ? (
+                        <EmployeeRowMobile key={employee.id} employee={employee} />
+                    )
+                    :(
+                        <EmployeeRow key={employee.id} employee={employee} />
+                    )
                 ))}
             </tbody>
         </table>

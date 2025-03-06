@@ -8,9 +8,13 @@ interface EmployeeRowProps {
     employee: Employee;
 }
 
-const EmployeeRow: React.FC<EmployeeRowProps> = ({ employee }) => {
+const EmployeeRowMobile: React.FC<EmployeeRowProps> = ({ employee }) => {
 
-    
+    const [isExpanded, setIsExpanded] = React.useState(false);
+
+    const handleExpand = () => {
+        setIsExpanded(!isExpanded);
+    };
     
     return (
         <tr>
@@ -22,11 +26,8 @@ const EmployeeRow: React.FC<EmployeeRowProps> = ({ employee }) => {
                 </picture>
             </td>
             <td>{employee.name}</td>
-            <td>{employee.job}</td>
-            <td>{formatAdmissionDate(employee.admission_date)}</td>
-            <td>{formatPhoneNumber(employee.phone)}</td>
         </tr>
     );
 };
 
-export default EmployeeRow;
+export default EmployeeRowMobile;
