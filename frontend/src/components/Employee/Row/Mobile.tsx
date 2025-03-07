@@ -26,6 +26,9 @@ const EmployeeRowMobile: React.FC<EmployeeRowProps> = ({ employee }) => {
                 </picture>
             </td>
             <td>{employee.name}</td>
+            <td>
+                <img src="/Employee/Table/Row/charm_chevron-down.svg" alt="Abrir " />
+            </td>
         </tr>
     );
 };

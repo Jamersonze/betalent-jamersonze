@@ -1,9 +1,9 @@
 import React, { useEffect } from 'react';
 import { Employee } from '../../types/employee/main';
 import EmployeeRow from './Row/Row';
+import EmployeeRowMobile from './Row/Mobile';
 
 import '../../styles/Employee/Table.css';
-import EmployeeRowMobile from './Row/Mobile';
 
 interface EmployeeTableProps {
     employees: Employee[];
@@ -31,12 +31,16 @@ const EmployeeTable: React.FC<EmployeeTableProps> = ({ employees }) => {
                 <tr>
                     <th>Image</th>
                     <th>Name</th>
-                    {!isMobile && (
+                    {!isMobile ? (
                         <>
                             <th>Job</th>
                             <th>Admission Date</th>
                             <th>Phone</th>
                         </>
+                    ):(
+                        <th>
+                            <img src="/Employee/Table/Circle.svg" alt="Detalhes" />
+                        </th>
                     )}
                 </tr>
             </thead>
