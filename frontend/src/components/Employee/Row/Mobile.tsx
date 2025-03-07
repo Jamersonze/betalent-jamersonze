@@ -4,6 +4,8 @@ import { Employee } from '../../../types/employee/main';
 import formatAdmissionDate from '../../../utils/format/admission-date';
 import formatPhoneNumber from '../../../utils/format/phone-number';
 
+import '../../../styles/Employee/RowMobile.css';
+
 interface EmployeeRowProps {
     employee: Employee;
 }
@@ -41,15 +43,14 @@ const EmployeeRowMobile: React.FC<EmployeeRowProps> = ({ employee }) => {
                         <section className='employee-info'>
                             <strong>Cargo:</strong>
                             <p>{employee.job}</p>
-                            
                         </section>
                         <section className='employee-info'>
                             <strong>Data de Admissão: </strong>
-                            {formatAdmissionDate(employee.admission_date)}
+                            <p>{formatAdmissionDate(employee.admission_date)}</p>
                         </section>
                         <section className='employee-info'>
                             <strong>Telefone: </strong>
-                            {formatPhoneNumber(employee.phone)}
+                            <p>{formatPhoneNumber(employee.phone)}</p>
                         </section>
                     </td>
                 </tr>
