@@ -18,7 +18,7 @@ const EmployeeRow: React.FC<EmployeeRowProps> = ({ employee }) => {
                 <picture>
                     <source srcSet={employee.image} type="image/webp" />
                     <source srcSet={employee.image} type="image/png" />
-                    <img width={50} src={employee.image} alt="Employee Image" />
+                    <img width={50} src={employee.image} alt="Employee Image" className='employee-photo' />
                 </picture>
             </td>
             <td>{employee.name}</td>

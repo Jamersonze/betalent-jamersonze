@@ -25,7 +25,7 @@ const EmployeeRowMobile: React.FC<EmployeeRowProps> = ({ employee }) => {
                     <picture>
                         <source srcSet={employee.image} type="image/webp" />
                         <source srcSet={employee.image} type="image/png" />
-                        <img width={50} src={employee.image} alt="Employee Image" />
+                        <img width={50} src={employee.image} alt="Employee Image" className='employee-photo' />
                     </picture>
                 </td>
                 <td>{employee.name}</td>
@@ -33,7 +33,7 @@ const EmployeeRowMobile: React.FC<EmployeeRowProps> = ({ employee }) => {
                     {isExpanded ? (
                         <img src="/Employee/Table/Row/charm_chevron-up.svg" alt="Abrir " />
                     ) : (
-                        <img src="/Employee/Table/Row/charm_chevron-down.svg" alt="Abrir " />
+                        <img src="/Employee/Table/Row/charm_chevron-down.svg" alt="Fechar " />
                     )}
                 </td>
             </tr>
