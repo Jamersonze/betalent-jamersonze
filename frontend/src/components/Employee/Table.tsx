@@ -38,7 +38,7 @@ const EmployeeTable: React.FC<EmployeeTableProps> = ({ employees }) => {
                             <th>Phone</th>
                         </>
                     ):(
-                        <th>
+                        <th className='mobile-details'>
                             <img src="/Employee/Table/Circle.svg" alt="Detalhes" />
                         </th>
                     )}

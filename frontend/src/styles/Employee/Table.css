@@ -39,6 +39,10 @@ td > img{
     border-radius: 50%;
 }
 
+.mobile-details{
+    text-align: center;
+}
+
 .not-found{
     text-align: center;
 }

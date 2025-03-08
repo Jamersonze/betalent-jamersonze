@@ -29,7 +29,7 @@ const EmployeeRowMobile: React.FC<EmployeeRowProps> = ({ employee }) => {
                     </picture>
                 </td>
                 <td>{employee.name}</td>
-                <td>
+                <td className='mobile-details'>
                     {isExpanded ? (
                         <img src="/Employee/Table/Row/charm_chevron-up.svg" alt="Abrir " />
                     ) : (
