@@ -24,10 +24,15 @@ td {
     text-align: start;
 }
 
+
+td > img{
+    padding: 0%;
+}
+
 .employee-expanded{
     padding: 0;
 }
 
-td > img{
-    padding: 0%;
+.not-found{
+    text-align: center;
 }

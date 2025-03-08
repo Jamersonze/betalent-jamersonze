@@ -47,7 +47,7 @@ const EmployeeTable: React.FC<EmployeeTableProps> = ({ employees }) => {
             {employees.length === 0 && 
             <tbody>
                 <tr>
-                    <td colSpan={5}>No employees found</td>
+                    <td colSpan={5} className='not-found'>No employees found</td>
                 </tr>
             </tbody>}
             <tbody>
