@@ -13,6 +13,6 @@ header {
     background-color: var(--white);
 }
 
-img{
+header > img{
     padding: 10px;
 }

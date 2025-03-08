@@ -13,11 +13,21 @@ thead {
 }
 
 th {
-    padding: 10px 0px;
+    padding: 14.5px;
     border: none;
+    text-align: start;
 }
 
 td {
-    padding: 0;
+    padding: 16px;
     background-color: var(--white);
+    text-align: start;
+}
+
+.employee-expanded{
+    padding: 0;
+}
+
+td > img{
+    padding: 0%;
 }

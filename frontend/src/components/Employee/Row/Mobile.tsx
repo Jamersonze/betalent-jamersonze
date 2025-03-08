@@ -39,7 +39,7 @@ const EmployeeRowMobile: React.FC<EmployeeRowProps> = ({ employee }) => {
             </tr>
             {isExpanded && (
                 <tr>
-                    <td colSpan={3}>
+                    <td colSpan={3} className='employee-expanded'>
                         <section className='employee-info'>
                             <strong>Cargo:</strong>
                             <p>{employee.job}</p>
