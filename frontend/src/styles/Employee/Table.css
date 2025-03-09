@@ -1,0 +1,48 @@
+table {
+    border-collapse: collapse;
+    border-radius: 8px;
+    margin-top: 20px;
+    overflow: hidden;
+}
+
+thead {
+    background-color: var(--blue-primary);
+    color: var(--white);
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+th {
+    padding: 14.5px;
+    border: none;
+    text-align: start;
+}
+
+td {
+    padding: 16px;
+    background-color: var(--white);
+    text-align: start;
+}
+
+
+td > img{
+    padding: 0%;
+}
+
+.employee-expanded{
+    padding: 0;
+}
+
+.employee-photo{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.mobile-details{
+    text-align: center;
+}
+
+.not-found{
+    text-align: center;
+}

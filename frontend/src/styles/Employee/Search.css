@@ -1,0 +1,40 @@
+h1{
+    color: var(--black-neutral);
+}
+
+/* Search */
+select {
+    padding: 12px 16px;
+    border: 1px solid var(--gray-10);
+    border-radius: 8px;
+    background-color: var(--white);
+    color: var(--black-neutral);
+}
+
+input[type="search"] {
+    padding: 12px 16px;
+    padding-right: 40px; /* Adjust padding to make space for the icon */
+    border: 1px solid var(--gray-10);
+    border-radius: 8px;
+    background-color: var(--white);
+    color: var(--black-neutral);
+
+    background-image: url(/Employee/Search/search.svg);
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: 192px 7px;
+}
+
+input[type="search"]::placeholder {
+    color: var(--gray-20);
+}
+
+/* .search-container::after {
+    content: url("/Employee/Search/search.svg");
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+    color: var(--gray-10);
+} */

@@ -1,0 +1,18 @@
+.employee-info{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    
+    border-bottom: 1px dashed var(--gray-10);
+
+    margin-top: 15px;
+    margin-right: 23px;
+    margin-top: 15px;
+    margin-left: 16px;
+
+}
+
+.employee-info > p{
+    margin: 0;
+}
