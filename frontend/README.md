@@ -2,6 +2,10 @@
 
 Este projeto é a interface frontend do sistema Betalent, desenvolvido para gerenciar talentos e oportunidades. Ele fornece uma plataforma intuitiva e amigável para que os usuários possam navegar e interagir com as funcionalidades do sistema.
 
+## Justificativa para uma nova feature
+
+No campo de busca, encontrei dificuldades para filtrar pela coluna, logo adicionei ao lado esquerdo do botão de pesquisa, um select box para especificar qual coluna a busca deve filtrar. A busca ocorrerá conforme o input do usuário e com a mudança desse select box.
+
 ## Funcionalidades Principais
 
 - **Cadastro de Talentos**: Permite o registro de novos talentos com informações detalhadas.
